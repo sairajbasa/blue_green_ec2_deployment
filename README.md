@@ -23,3 +23,39 @@ blue_green_ec2_deployment
 │   └── green_environment.png
 │
 └── README.md
+
+```
+
+## 🟦 Blue Environment (Existing Production)
+
+Runs Version-1 of the application
+
+Limited features
+
+Registered with Blue Target Group
+
+ALB routes 100% traffic to Blue
+
+## 🟩 Green Environment (Parallel Deployment)
+
+Runs Version-2 with additional features
+
+Deployed in parallel
+
+Registered with Green Target Group
+
+No changes made to Blue environment
+
+## 🔁 Deployment Flow
+
+Blue environment serves live traffic
+
+Green environment is created and tested separately
+
+ALB listener rule updated:
+
+Green → 100% traffic
+
+Blue → 0% traffic
+
+If any issue occurs, rollback is done by switching traffic back to Blue
