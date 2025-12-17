@@ -1,3 +1,4 @@
+```
 #!/bin/bash
 
 # Blue Environment - Limited Features
@@ -16,3 +17,4 @@ if [ "$FEATURE_LEVEL" = "advanced" ]; then
   echo "<hr><h2>Dashboard</h2>" >> $HTML
   echo "<button>Download Report</button>" >> $HTML
 fi
+``` bash
